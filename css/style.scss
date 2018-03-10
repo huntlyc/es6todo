@@ -1,3 +1,5 @@
+$lightGreen: rgba(63, 243, 193, 0.8);
+
 *{
     margin: 0;
     padding: 0;
@@ -65,18 +67,18 @@ body{
 
             &:focus,
             &:active{
-                border: 1px dashed #3ff3c1c7;
+                border: 1px dashed $lightGreen;
             }
             button{
                 font-weight: bold;
-                border: 1px solid #3ff3c1c7;
-                background-color: #3ff3c1c7;
+                border: 1px solid $lightGreen;
+                background-color: $lightGreen;
                 border-top-right-radius: 6px;
                 border-bottom-right-radius: 6px;
                 cursor: pointer;
 
                 &:hover{
-                    background-color: #15d19c;
+                    background-color: darken($lightGreen, 10);
                 }
             }
         }
@@ -97,9 +99,9 @@ body{
                 margin-left: 0.5rem;
                 text-decoration: none;
                 font-weight: bold;
-                color: #d00000;
+                color: darken(red, 20);
                 &:hover{
-                    color: #ff0000;
+                    color: red;
                 }
             }
         }
