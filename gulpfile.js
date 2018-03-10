@@ -34,4 +34,9 @@ gulp.task('css', (cb) => {
     );
 });
 
+gulp.task('watch', () => {
+    gulp.watch('./css/*.scss', ['css']);
+    gulp.watch('./js/*.js', ['js']);
+});
+
 gulp.task('default', ['css', 'js']);
