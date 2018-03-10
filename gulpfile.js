@@ -4,23 +4,34 @@ const minifyCSS = require('gulp-csso');
 const uglifyJS = require('gulp-uglify');
 const babel = require('gulp-babel');
 const pump = require('pump');
+const concat = require('gulp-concat');
+
 
 gulp.task('js', (cb) => {
+
     pump(
         [
             gulp.src('./js/*.js'),
+            concat('app.min.js'),
             babel({presets: ['env']}),
-            gulp.dest('./app.js')
+            uglifyJS(),
+            gulp.dest('./')
         ],
         cb
     );
 });
 
-gulp.task('css', () => {
-    return gulp.src('./css/*.scss')
-        .pipe(sassCompile())
-        //.pipe(minifyCSS())
-        .pipe(gulp.dest('./style.css'));
+gulp.task('css', (cb) => {
+    pump(
+        [
+            gulp.src('./css/*.scss'),
+            concat('style.min.css'),
+            sassCompile(),
+            minifyCSS(),
+            gulp.dest('./')
+        ],
+        cb
+    );
 });
 
 gulp.task('default', ['css', 'js']);
