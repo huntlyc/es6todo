@@ -1,7 +1,7 @@
 {
   "name": "es6todo",
   "version": "1.0.0",
-  "description": "wee todo app test",
+  "description": "wee todo app",
   "main": "index.html",
   "dependencies": {
     "babel-core": "^6.26.0",
@@ -19,5 +19,5 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "MIT"
+  "license": "The Unlicense"
 }
