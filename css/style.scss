@@ -69,17 +69,20 @@ body{
             &:active{
                 border: 1px dashed $lightGreen;
             }
-            button{
-                font-weight: bold;
-                border: 1px solid $lightGreen;
-                background-color: $lightGreen;
-                border-top-right-radius: 6px;
-                border-bottom-right-radius: 6px;
-                cursor: pointer;
 
-                &:hover{
-                    background-color: darken($lightGreen, 10);
-                }
+
+        }
+        button{
+
+            font-weight: bold;
+            border: 1px solid $lightGreen;
+            background-color: $lightGreen;
+            border-top-right-radius: 6px;
+            border-bottom-right-radius: 6px;
+            cursor: pointer;
+
+            &:hover{
+                background-color: darken($lightGreen, 10);
             }
         }
     }
